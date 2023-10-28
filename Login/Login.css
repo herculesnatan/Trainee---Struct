@@ -44,6 +44,7 @@ button {
     font-family: 'Manrope', sans-serif;
     font-size: 1.75rem;
     border: none;
+    transition: 0.5s ease;
 }
 
 hr {
@@ -52,6 +53,7 @@ hr {
     width: 25rem;
     height: 1px;
 }
+
 
 .agrupamento_campo {
     width: 24rem;
@@ -66,6 +68,11 @@ hr {
     margin-left: 1rem;
     margin-top: 1.5rem;
     color: #A27B5C;
+}
+
+button:hover {
+    background-color: #A27B5C;
+    color: #DCD7C9;
 }
 
 #caixa_login {
@@ -100,6 +107,11 @@ hr {
 #esqueceu > span {
     color: #DCD7C9;
     font-family: 'Manrope', sans-serif;
+    transition: 0.5s ease;
+}
+
+#esqueceu > span:hover {
+    color: #A27B5C;
 }
 
 #button_criar {
