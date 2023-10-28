@@ -53,6 +53,10 @@ hr {
     height: 1px;
 }
 
+button:hover {
+    background-color: #A27B5C;
+    color: #DCD7C9;
+}
 
 .agrupamento_campo {
     width: 24rem;
@@ -67,11 +71,6 @@ hr {
     margin-left: 1rem;
     margin-top: 1.5rem;
     color: #A27B5C;
-}
-
-button:hover {
-    background-color: #A27B5C;
-    color: #DCD7C9;
 }
 
 #caixa_login {
