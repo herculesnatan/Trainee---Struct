@@ -118,3 +118,9 @@ button:hover {
 #button_criar {
     margin-bottom: 4rem;
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}

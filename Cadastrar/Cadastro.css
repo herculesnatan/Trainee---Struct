@@ -85,3 +85,9 @@ button:hover {
     margin: 2.25rem 10.9rem;
     margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
