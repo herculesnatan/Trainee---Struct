@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Doppio One', sans-serif;
+}
+
+h3 {
+    color: #550F0F;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #550F0F;
+    width: 100%;
+    height: 70px;
+}
+
+header .menu-esq img {width: 170px; height: 80px;}
+
+header .menu-dir ul {list-style: none;}
+
+header .menu-dir ul li {display: inline; margin-right: 20px;}
+
+header .menu-dir ul li a{color: white; text-decoration: none; transition: 0.3s;}
+
+header .menu-dir ul li a:hover{color: #2f2d2d}
+
+
+main #banner{
+    background-image: url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 400px;
+    
+}
+
+main #banner .content-banner {
+    color: white;
+    padding-top: 9em;
+    text-shadow: 2px 2px rgb(98, 13, 13);
+}
+
+main #banner .content-banner h2{font-size: 48px;}
+
+main #info {text-align: center; padding: 20px;}
+
+main #info .info-content {margin-top: 30px;}
+
+h3 {
+    color: #550F0F;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+main #info .info-content input {
+    background-color: #415615;
+    color: white;
+    width: 200px;
+    margin-top: 4em;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+main #info .info-content input:hover {background-color: #608511;}
+
+main #location {
+    background-color: #F9F8F8;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main #location img {width: 600px; height: 300px;}
+
+main #location .location-content {text-align: center; width: 40%;}
+
+main #location .location-content .dates h4{color: #415615; margin-top: 35px;}
+
+main #location .location-content .dates .dates-content {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #550F0F;
+    text-align: center;
+    height: 130px;
+}
+
+
+footer img {width: 160px;}
+
+
+@media (max-width: 1000px) {
+   main #location img {
+        display: none;
+    }
+
+    main #location .location-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    header ul {display: none;}
+
+    header span {
+        background-image: url(images/more.png);
+        width: 10px;
+        height: 10px;
+    }
+}
