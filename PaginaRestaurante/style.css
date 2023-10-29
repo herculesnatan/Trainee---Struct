@@ -114,9 +114,4 @@ footer img {width: 160px;}
 @media (max-width: 620px) {
     header ul {display: none;}
 
-    header span {
-        background-image: url(images/more.png);
-        width: 10px;
-        height: 10px;
-    }
 }
