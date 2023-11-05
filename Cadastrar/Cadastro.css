@@ -7,21 +7,25 @@
 }
 
 body {
-    background-color: #2C3639;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    background-size: cover;
+    background-image: linear-gradient(
+        rgba(44, 54, 57, 0.75), 
+        rgba(44, 54, 57, 0.75)
+      ), url("../Images/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-family: 'Manrope', sans-serif;
-    font-weight: 200;
+    font-weight: bold;
     font-size: 2.25rem;
-    color: #DCD7C9;
+    color: #DCD7C9
 }
 
 input {
-    color: #A27B5C;
+    color: rgb(44, 54, 57);
     font-family: 'Manrope', sans-serif;
     font-size: 1.25rem;
     border: none;
@@ -34,25 +38,24 @@ input {
 button {
     border-radius: 5rem;
     margin-bottom: 1.5rem;
-    width: 21.25rem;
-    height: 3.5625rem;
-    margin-bottom: 4rem;
+    width: 60%;
+    height: 3.5625rem; 
     background-color: #DCD7C9;
-    color: #A27B5C;
+    color: rgb(44, 54, 57);
     font-family: 'Manrope', sans-serif;
     font-size: 1.75rem;
+    font-weight: bold;
     border: none;
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,.8);
     transition: 0.5s ease;
 }
 
 button:hover {
-    background-color: #A27B5C;
+    background-color: rgb(44, 54, 57);
     color: #DCD7C9;
 }
 
 .agrupamento-campo-input {
-    width: 24rem;
     height: 3rem;
     border-radius: 0.5rem;
     background-color: #FCF5ED;
@@ -65,29 +68,61 @@ button:hover {
 .fa-solid {
     margin-left: 1rem;
     margin-top: 1.5rem;
-    color: #A27B5C;
+    color: rgb(44, 54, 57);
 }
 
 #bloco-cadastro {
-    width: 37.25rem;
-    background-color: #3F4E4F;
+    width: 33%; 
     border-radius: 1.875rem;
+    background: #3F4E4F;
     margin: auto;
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #logo {
-    width: 15.5rem;
-    height: 12.375rem;
+    width: 50%;
+    border-radius: 10%;
+    height: auto;
     margin: 2.25rem 10.9rem;
     margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+    input { 
+        width: 75%;
+    }
+
+    .agrupamento-campo-input {
+        width: 65%;
+    }
+
+    #bloco-cadastro  {
+        width: 50%;
+    }
 }
 
 @media (max-width: 768px) {
     html {
         font-size: 12px;
+    }
+
+    .agrupamento-campo-input {
+        height: 4rem;
+    }
+
+    .fa-solid {
+        margin-top: 2rem;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    #bloco-cadastro  {
+        width: 90%;
     }
 }

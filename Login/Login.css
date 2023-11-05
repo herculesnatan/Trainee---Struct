@@ -14,7 +14,6 @@ body {
       ), url("../Images/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 h1 {
@@ -150,6 +149,14 @@ button:hover {
 @media (max-width: 768px) {
     html {
         font-size: 12px;
+    }
+
+    .agrupamento_campo {
+        height: 4rem;
+    }
+
+    .fa-solid {
+        margin-top: 2rem;
     }
 
     #caixa_login {
