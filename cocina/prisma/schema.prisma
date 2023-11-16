@@ -9,3 +9,61 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Restaurante {
+  id        Int       @id @default(autoincrement())
+  nome      String
+  descricao String
+  cardapio  Cardapio?
+  usuarios  Usuario[]
+}
+
+model Cardapio {
+  id            Int         @id @default(autoincrement())
+  categorias    Categoria[]
+  restaurante   Restaurante @relation(fields: [restauranteID], references: [id])
+  restauranteID Int         @unique
+}
+
+model Categoria {
+  id         Int      @id @default(autoincrement())
+  nome       String   @unique
+  cardapio   Cardapio @relation(fields: [cardapioId], references: [id])
+  cardapioId Int
+  comidas    Comida[]
+}
+
+model Comida {
+  id          Int       @id @default(autoincrement())
+  nome        String    @unique
+  preco       Decimal
+  descricao   String
+  itens       Item[]
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId Int
+}
+
+model Usuario {
+  id            Int         @id @default(autoincrement())
+  nome          String
+  email         String      @unique
+  senha         String
+  carrinho      Carrinho?
+  restaurante   Restaurante @relation(fields: [restauranteId], references: [id])
+  restauranteId Int
+}
+
+model Carrinho {
+  id        Int     @id @default(autoincrement())
+  itens     Item[]
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int     @unique
+}
+
+model Item {
+  id         Int       @id @default(autoincrement())
+  carrinho   Carrinho? @relation(fields: [carrinhoId], references: [id])
+  carrinhoId Int
+  comida     Comida    @relation(fields: [comidaId], references: [id])
+  comidaId   Int
+}
